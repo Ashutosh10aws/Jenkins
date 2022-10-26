@@ -15,7 +15,7 @@ public class TestGreeter {
 
   private Greeter greeter;
 
-  @Before
+  @Before 
   public void setup() {
     greeter = new Greeter();
   }
