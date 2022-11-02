@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy in Staging Environment'){
             steps{
-                build job: 'Stage-Deployment'
+                build job: 'deploy_to_stage'
 
             }
             
@@ -24,7 +24,7 @@ pipeline {
                 timeout(time:5, unit:'DAYS'){
                     input message:'Approve PRODUCTION Deployment?'
                 }
-                build job: 'Prod-Deployment'
+                build job: 'Deploy_to-prod'
             }
         }
     }
